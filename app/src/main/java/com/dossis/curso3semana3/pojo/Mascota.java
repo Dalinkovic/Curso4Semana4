@@ -37,6 +37,9 @@ public class Mascota {
     public void setLikes(int likes) {
         this.likes = likes;
     }
+    public void addLike(){
+        this.likes +=1;
+    }
 
 
     public int getIdFoto() {

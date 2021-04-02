@@ -1,10 +1,49 @@
 package com.dossis.curso3semana3.pojo;
 
-import android.net.Uri;
-
 public class Mascota {
     private int id;
     private String nombre;
     private int likes;
-    private Uri uri;
+
+    private int idFoto;
+
+    public Mascota(int id, String nombre, int likes, int idFoto) {
+        this.id = id;
+        this.nombre = nombre;
+        this.likes = likes;
+        this.idFoto = idFoto;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getLikes() {
+        return likes;
+    }
+
+    public void setLikes(int likes) {
+        this.likes = likes;
+    }
+
+
+    public int getIdFoto() {
+        return idFoto;
+    }
+
+    public void setIdFoto(int idFoto) {
+        this.idFoto = idFoto;
+    }
 }

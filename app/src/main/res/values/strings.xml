@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Curso3Semana3</string>
+    <string name="imagen_de_la_mascota">Imagen de la mascota</string>
+    <string name="nombre_mascota">Nombre</string>
+    <string name="dummy_contador_likes">4</string>
+    <string name="marcar_like_a_esta_mascota">Marcar like a esta mascota</string>
+    <string name="n_mero_de_veces_que_fue_dado_like">Número de veces que fue dado like</string>
 </resources>

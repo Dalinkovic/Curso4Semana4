@@ -17,12 +17,13 @@ import java.util.ArrayList;
 public class MascotaAdapter extends RecyclerView.Adapter<MascotaAdapter.MascotaViewHolder> {
 
     ArrayList<Mascota> mascotas;
+    boolean permitirLike = false;
 
-    public MascotaAdapter(ArrayList<Mascota> mascotas)
-    {
-        this.mascotas=mascotas;
-
+    public MascotaAdapter(ArrayList<Mascota> mascotas, boolean permitirLike) {
+        this.mascotas = mascotas;
+        this.permitirLike = permitirLike;
     }
+
     @NonNull
     @Override
     public MascotaViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -34,18 +35,23 @@ public class MascotaAdapter extends RecyclerView.Adapter<MascotaAdapter.MascotaV
     @Override
     public void onBindViewHolder(@NonNull MascotaViewHolder mascotaViewHolder, int position) {
         //Asocia cada elemento de la lista con cada view.
-        Mascota mascota= mascotas.get(position);
+        Mascota mascota = mascotas.get(position);
         mascotaViewHolder.imgFoto.setImageResource(mascota.getIdFoto());
         mascotaViewHolder.tvNombre.setText(mascota.getNombre());
-        mascotaViewHolder.tvContadorLikes.setText(String.valueOf( mascota.getLikes()));
-        mascotaViewHolder.imgHuesoBlanco.setOnClickListener(new View.OnClickListener(){
+        mascotaViewHolder.tvContadorLikes.setText(String.valueOf(mascota.getLikes()));
+        if (permitirLike) {
+            mascotaViewHolder.imgHuesoBlanco.setVisibility(View.VISIBLE);
+            mascotaViewHolder.imgHuesoBlanco.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View v) {
-                mascota.addLike();
-                notifyDataSetChanged();
-            }
-        });
+                @Override
+                public void onClick(View v) {
+                    mascota.addLike();
+                    notifyDataSetChanged();
+                }
+            });
+        } else {
+            mascotaViewHolder.imgHuesoBlanco.setVisibility(View.INVISIBLE);
+        }
     }
 
     @Override

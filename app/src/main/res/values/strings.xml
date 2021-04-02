@@ -5,4 +5,9 @@
     <string name="dummy_contador_likes">4</string>
     <string name="marcar_like_a_esta_mascota">Marcar like a esta mascota</string>
     <string name="n_mero_de_veces_que_fue_dado_like">Número de veces que fue dado like</string>
+    <string name="vote_por_su_perro_favorito">Vote por su perro favorito</string>
+    <string name="lista_de_favoritos">Lista de favoritos</string>
+    <string name="logo">Logo</string>
+    <string name="petagram">Petagram</string>
+    <string name="favoritos">Favoritos</string>
 </resources>

@@ -1,6 +1,6 @@
 package com.dossis.curso3semana3.pojo;
 
-public class Mascota {
+public class Mascota implements  Comparable{
     private int id;
     private String nombre;
     private int likes;
@@ -48,5 +48,12 @@ public class Mascota {
 
     public void setIdFoto(int idFoto) {
         this.idFoto = idFoto;
+    }
+
+
+    @Override
+    public int compareTo(Object o) {
+        Mascota m = (Mascota) o;
+        return m.getLikes() - this.getLikes();
     }
 }

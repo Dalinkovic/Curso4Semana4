@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <dimen name="activity_corner_radius_cardiview">4dp</dimen>
+    <dimen name="activity_corner_radius_cardview">4dp</dimen>
     <dimen name="hueso_ancho">60dp</dimen>
     <dimen name="hueso_alto">60dp</dimen>
+    <dimen name="elavation_actionbar">4dp</dimen>
+    <dimen name="dialogCornerRadius">4dp</dimen>
 </resources>

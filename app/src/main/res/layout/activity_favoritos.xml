@@ -5,17 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
-
-<include android:id="@+id/miActionBar" layout="@layout/mi_action_bar"></include>
+    tools:context=".FavoritosActivity">
+    <include android:id="@+id/miActionBar" layout="@layout/mi_action_bar"></include>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Principal"
-        />
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvMascotas"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:text="Favoritos"
         />
 </LinearLayout>

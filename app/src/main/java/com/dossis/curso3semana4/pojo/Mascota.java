@@ -1,4 +1,4 @@
-package com.dossis.curso3semana3.pojo;
+package com.dossis.curso3semana4.pojo;
 
 public class Mascota implements  Comparable{
     private int id;

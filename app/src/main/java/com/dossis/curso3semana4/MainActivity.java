@@ -1,17 +1,16 @@
-package com.dossis.curso3semana3;
+package com.dossis.curso3semana4;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.dossis.curso3semana3.pojo.Mascota;
+import com.dossis.curso3semana3.R;
+import com.dossis.curso3semana4.pojo.Mascota;
 
 import java.util.ArrayList;
 

@@ -10,15 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Curso3Semana3">
         <activity
-            android:name=".FavoritosActivity"
-            android:parentActivityName=".MainActivity">
+            android:name="com.dossis.curso3semana4.FavoritosActivity"
+            android:parentActivityName="com.dossis.curso3semana4.MainActivity">
             <!--Soporte para versiones 4.0 o menores -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value="com.dossis.curso3semana4.MainActivity" />
 
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name="com.dossis.curso3semana4.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

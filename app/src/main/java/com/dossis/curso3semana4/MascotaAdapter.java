@@ -1,4 +1,4 @@
-package com.dossis.curso3semana3;
+package com.dossis.curso3semana4;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,7 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.RecyclerView.ViewHolder;
 
-import com.dossis.curso3semana3.pojo.Mascota;
+import com.dossis.curso3semana3.R;
+import com.dossis.curso3semana4.pojo.Mascota;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package com.dossis.curso3semana3;
+package com.dossis.curso3semana4;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.dossis.curso3semana3", appContext.getPackageName());
+        assertEquals("com.dossis.curso3semana4", appContext.getPackageName());
     }
 }

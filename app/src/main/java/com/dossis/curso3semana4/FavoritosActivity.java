@@ -9,7 +9,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.dossis.curso3semana3.R;
+import com.dossis.curso3semana4.R;
 
 import java.util.ArrayList;
 import java.util.Collections;

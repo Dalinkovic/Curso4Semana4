@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.RecyclerView.ViewHolder;
 
-import com.dossis.curso3semana3.R;
+import com.dossis.curso3semana4.R;
 import com.dossis.curso3semana4.pojo.Mascota;
 
 import java.util.ArrayList;

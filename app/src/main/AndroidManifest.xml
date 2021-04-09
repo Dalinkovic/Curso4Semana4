@@ -10,15 +10,35 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Curso3Semana4">
         <activity
-            android:name="com.dossis.curso3semana4.FavoritosActivity"
-            android:parentActivityName="com.dossis.curso3semana4.MainActivity">
-            <!--Soporte para versiones 4.0 o menores -->
+            android:name=".ContactoActivity"
+            android:label="@string/title_activity_contacto"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.Curso3Semana4.NoActionBar">
+
+            <!-- Soporte para versiones 4.0 o menores -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.dossis.curso3semana4.MainActivity" />
-
         </activity>
-        <activity android:name="com.dossis.curso3semana4.MainActivity">
+        <activity
+            android:name=".AcercaDeActivity"
+            android:parentActivityName=".MainActivity">
+
+            <!-- Soporte para versiones 4.0 o menores -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dossis.curso3semana4.MainActivity" />
+        </activity>
+        <activity
+            android:name=".FavoritosActivity"
+            android:parentActivityName=".MainActivity">
+
+            <!-- Soporte para versiones 4.0 o menores -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dossis.curso3semana4.MainActivity" />
+        </activity>
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

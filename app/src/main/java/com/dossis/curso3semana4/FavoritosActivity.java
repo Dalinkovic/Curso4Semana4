@@ -17,7 +17,7 @@ import java.util.Objects;
 
 import static com.dossis.curso3semana4.MainActivity.mascotas;
 
-public class FavoritosActivity extends AppCompatActivity {
+public class FavoritosActivity extends BaseActivity {
 
     public ArrayList mascotasOrdenadas;
     private RecyclerView rvMascotas;
@@ -26,21 +26,15 @@ public class FavoritosActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favoritos);
-        setActionBar();
+
+        setActionBar(this,true);
+
         crearArrayMascotas();
         asociarRecyclerView();
         inicializarAdapter();
 
     }
 
-    private void setActionBar() {
-        setSupportActionBar((Toolbar) findViewById(R.id.miActionBar));
-        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
-
-        ImageView imgFavoritos = (ImageView) findViewById(R.id.imgFavoritos);
-        imgFavoritos.setVisibility(View.INVISIBLE);
-
-    }
 
     private void crearArrayMascotas() {
         mascotasOrdenadas = (ArrayList) mascotas.clone();

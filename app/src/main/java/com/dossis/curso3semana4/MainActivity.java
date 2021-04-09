@@ -2,6 +2,8 @@ package com.dossis.curso3semana4;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,12 +11,11 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.dossis.curso3semana4.R;
 import com.dossis.curso3semana4.pojo.Mascota;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     public static ArrayList mascotas;
     private RecyclerView rvMascotas;
@@ -24,22 +25,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        setActionBar();
+        setActionBar(this,false);
+
         crearArrayMascotas();
         asociarRecyclerView();
         inicializarAdapter();
-    }
-
-    private void setActionBar() {
-
-        setSupportActionBar((Toolbar) findViewById(R.id.miActionBar));
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-
-        ImageView imgFavoritos = (ImageView) findViewById(R.id.imgFavoritos);
-        imgFavoritos.setOnClickListener(v -> {
-            Intent intentFavoritos = new Intent(MainActivity.this, FavoritosActivity.class);
-            startActivity(intentFavoritos);
-        });
     }
 
     private void crearArrayMascotas() {
@@ -65,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void inicializarAdapter() {
-        MascotaAdapter adapter = new MascotaAdapter(mascotas,true);
+        MascotaAdapter adapter = new MascotaAdapter(mascotas, true);
         rvMascotas.setAdapter(adapter);
     }
 }

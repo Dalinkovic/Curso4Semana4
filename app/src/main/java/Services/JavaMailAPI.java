@@ -1,10 +1,9 @@
-package services;
+package Services;
 
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
-import android.util.Log;
-import android.widget.Toast;
+
 import java.util.Properties;
 import javax.mail.Message;
 import javax.mail.MessagingException;

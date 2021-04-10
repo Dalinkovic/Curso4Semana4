@@ -1,4 +1,4 @@
-package com.dossis.curso3semana4;
+package com.dossis.curso3semana4.Activitys;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -12,18 +12,20 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.dossis.curso3semana4.R;
+
 public class BaseActivity extends AppCompatActivity {
 
-
+public Toolbar toolbar;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
         super.onCreate(savedInstanceState, persistentState);
-
     }
 
     public void setActionBar(Activity activity, boolean BotonUp) {
 
-        setSupportActionBar((Toolbar) findViewById(R.id.miActionBar));
+        toolbar=(Toolbar) findViewById(R.id.miActionBar);
+        setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(BotonUp);
 
         ImageView imgFavoritos = (ImageView) findViewById(R.id.imgFavoritos);

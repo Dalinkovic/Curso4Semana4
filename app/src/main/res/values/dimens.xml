@@ -11,4 +11,5 @@
     <dimen name="favoritos_width">48dp</dimen>
     <dimen name="favoritos_height">48dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="cabecera_text_size">16sp</dimen>
 </resources>

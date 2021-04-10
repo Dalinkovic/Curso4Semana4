@@ -12,35 +12,35 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Curso3Semana4">
         <activity
-            android:name=".ContactoActivity"
+            android:name=".Activitys.ContactoActivity"
             android:label="@string/title_activity_contacto"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".Activitys.MainActivity"
             android:theme="@style/Theme.Curso3Semana4.NoActionBar">
 
             <!-- Soporte para versiones 4.0 o menores -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.dossis.curso3semana4.MainActivity" />
+                android:value="com.dossis.curso3semana4.Activitys.MainActivity" />
         </activity>
         <activity
-            android:name=".AcercaDeActivity"
-            android:parentActivityName=".MainActivity">
+            android:name=".Activitys.AcercaDeActivity"
+            android:parentActivityName=".Activitys.MainActivity">
 
             <!-- Soporte para versiones 4.0 o menores -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.dossis.curso3semana4.MainActivity" />
+                android:value="com.dossis.curso3semana4.Activitys.MainActivity" />
         </activity>
         <activity
-            android:name=".FavoritosActivity"
-            android:parentActivityName=".MainActivity">
+            android:name=".Activitys.FavoritosActivity"
+            android:parentActivityName=".Activitys.MainActivity">
 
             <!-- Soporte para versiones 4.0 o menores -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.dossis.curso3semana4.MainActivity" />
+                android:value="com.dossis.curso3semana4.Activitys.MainActivity" />
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".Activitys.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

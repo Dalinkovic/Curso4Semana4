@@ -1,4 +1,4 @@
-package com.dossis.curso3semana4;
+package com.dossis.curso3semana4.Adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.RecyclerView.ViewHolder;
 
 import com.dossis.curso3semana4.R;
-import com.dossis.curso3semana4.pojo.Mascota;
+import com.dossis.curso3semana4.POJO.Mascota;
 
 import java.util.ArrayList;
 

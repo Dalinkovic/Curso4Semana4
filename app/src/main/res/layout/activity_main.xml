@@ -3,24 +3,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context="com.dossis.curso3semana4.MainActivity">
+    tools:context="com.dossis.curso3semana4.Activitys.MainActivity">
 
     <include
         android:id="@+id/miActionBar"
-        layout="@layout/mi_action_bar" />
-
-    <TextView
+        layout="@layout/mi_action_bar"
+        />
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/primary_dark"
-        android:gravity="center"
-        android:text="@string/vote_por_su_perro_favorito"
-        android:textColor="@color/accent"
-        android:textSize="18sp" />
+        android:layout_height="wrap_content">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvMascotas"
+    </com.google.android.material.tabs.TabLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent">
+
+    </androidx.viewpager.widget.ViewPager>
+
 </LinearLayout>

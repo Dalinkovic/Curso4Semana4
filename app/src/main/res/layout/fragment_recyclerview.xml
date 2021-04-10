@@ -1,26 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.dossis.curso3semana4.Activitys.FavoritosActivity">
-
-    <include
-        android:id="@+id/miActionBar"
-        layout="@layout/mi_action_bar" />
+    android:layout_below="@+id/miActionBar">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/primary_dark"
         android:gravity="center"
-        android:text="@string/lista_de_favoritos"
+        android:text="@string/vote_por_su_perro_favorito"
         android:textColor="@color/accent"
         android:textSize="18sp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvMascotas"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-</LinearLayout>
+        android:layout_height="match_parent"/>
+</FrameLayout>

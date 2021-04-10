@@ -1,8 +1,8 @@
-package com.dossis.curso3semana4;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.dossis.curso3semana4.Activitys;
 
 import android.os.Bundle;
+
+import com.dossis.curso3semana4.R;
 
 public class AcercaDeActivity extends BaseActivity {
 
@@ -10,6 +10,6 @@ public class AcercaDeActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_acerca_de);
-        setActionBar(this,true);
+        if (toolbar==null) {setActionBar(this,true);}
     }
 }

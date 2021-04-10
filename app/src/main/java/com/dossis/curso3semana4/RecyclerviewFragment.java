@@ -1,35 +1,36 @@
 package com.dossis.curso3semana4;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.ImageView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.dossis.curso3semana4.pojo.Mascota;
+import com.dossis.curso3semana4.Adapter.MascotaAdapter;
+import com.dossis.curso3semana4.POJO.Mascota;
 
 import java.util.ArrayList;
 
-public class MainActivity extends BaseActivity {
-
+public class RecyclerviewFragment extends Fragment
+{
     public static ArrayList mascotas;
     private RecyclerView rvMascotas;
 
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        setActionBar(this,false);
-
-        crearArrayMascotas();
-        asociarRecyclerView();
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        //return super.onCreateView(inflater, container, savedInstanceState);
+        View v = inflater.inflate(R.layout.fragment_recyclerview,container,false);
+          crearArrayMascotas();
+        asociarRecyclerView(v);
         inicializarAdapter();
+
+        return v;
     }
 
     private void crearArrayMascotas() {
@@ -47,9 +48,9 @@ public class MainActivity extends BaseActivity {
 
     }
 
-    private void asociarRecyclerView() {
-        rvMascotas = (RecyclerView) findViewById(R.id.rvMascotas);
-        LinearLayoutManager llm = new LinearLayoutManager(this);
+    private void asociarRecyclerView(View v) {
+        rvMascotas = (RecyclerView)  v.findViewById(R.id.rvMascotas);
+        LinearLayoutManager llm = new LinearLayoutManager(v.getContext());
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         rvMascotas.setLayoutManager(llm);
     }

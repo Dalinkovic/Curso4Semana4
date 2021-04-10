@@ -1,13 +1,14 @@
-package com.dossis.curso3semana4;
+package com.dossis.curso3semana4.Activitys;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.dossis.curso3semana4.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
-import services.JavaMailAPI;
+import Services.JavaMailAPI;
 
 public class ContactoActivity extends BaseActivity implements JavaMailAPI.OnTaskCompleted {
 
@@ -20,7 +21,9 @@ public class ContactoActivity extends BaseActivity implements JavaMailAPI.OnTask
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contacto);
-        setActionBar(this, true);
+
+        if (toolbar==null) {setActionBar(this,true);}
+
         tvMensaje = findViewById(R.id.tvMensaje);
         tvEmail = findViewById(R.id.tvEmail);
         tvNombre = findViewById(R.id.tvNombre);

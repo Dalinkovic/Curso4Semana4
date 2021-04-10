@@ -21,4 +21,7 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="mensaje_enviado">Se envió correctamente el email.</string>
+    <string name="mensaje_no_enviado">No se pudo envíar el mensaje.</string>
+    <string name="asunto_contacto">\"Contacto \"</string>
 </resources>

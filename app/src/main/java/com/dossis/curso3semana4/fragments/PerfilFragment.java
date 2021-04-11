@@ -39,23 +39,14 @@ public class PerfilFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.fragment_perfil, container, false);
-        View layout = v.findViewById(R.id.layoutPerritoContainer);
+
         Mascota miMascota = (Mascota) mascotasVotacion.get(0);
 
-        ImageView imgHuesoBlanco = layout.findViewById(R.id.imgHuesoBlanco);
-        imgHuesoBlanco.setVisibility(View.GONE);
-
-        ImageView imgHuesoAmarillo = layout.findViewById(R.id.imgHuestoAmarillo);
-        imgHuesoAmarillo.setVisibility(View.GONE);
-
-        TextView tvLikes = layout.findViewById(R.id.tvContadorLikes);
-        tvLikes.setVisibility(View.GONE);
-
-        TextView tvNombre = layout.findViewById(R.id.tvNombre);
+        TextView tvNombre = v.findViewById(R.id.tvNombre);
         tvNombre.setText(miMascota.getNombre());
 
-        ImageView imgFoto = layout.findViewById(R.id.imgFoto);
-        imgFoto.setImageResource(miMascota.getIdFoto());
+        ImageView imgFotoCircular = v.findViewById(R.id.imgFotoCircular);
+        imgFotoCircular.setImageResource(miMascota.getIdFoto());
 
         crearArrayMascotas();
         asociarRecyclerView(v);

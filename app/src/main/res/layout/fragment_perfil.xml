@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_below="@+id/miActionBar"
     tools:context=".fragments.PerfilFragment">
 
@@ -17,11 +18,26 @@
             android:gravity="center"
             android:text="@string/mi_mascota"
             android:textSize="@dimen/fuente_cabecera" />
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/imgFotoCircular"
+            android:src="@drawable/perro1"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            app:civ_shadow_radius="5dp"
+            android:layout_marginTop="10dp"
+            android:foregroundGravity="center"
+            app:civ_circle_color="@color/white"/>
 
-        <include
-            android:id="@+id/layoutPerritoContainer"
-            layout="@layout/perrito_container" />
-
+        <TextView
+            android:id="@+id/tvNombre"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="12"
+            android:gravity="center"
+            android:text="@string/nombre_mascota"
+            android:textSize="@dimen/nombre_mascota"
+            android:textStyle="bold" />
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvPerfil"
             android:layout_width="match_parent"

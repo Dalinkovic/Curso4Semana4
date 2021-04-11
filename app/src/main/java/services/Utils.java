@@ -1,4 +1,4 @@
-package Services;
+package services;
 
 public class Utils {
     public static final String EMAIL="loqueseaparaprobar@outlook.com";

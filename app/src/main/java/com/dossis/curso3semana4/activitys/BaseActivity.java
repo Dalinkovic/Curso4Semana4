@@ -1,4 +1,4 @@
-package com.dossis.curso3semana4.Activitys;
+package com.dossis.curso3semana4.activitys;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -16,7 +16,8 @@ import com.dossis.curso3semana4.R;
 
 public class BaseActivity extends AppCompatActivity {
 
-public Toolbar toolbar;
+    public Toolbar toolbar;
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
         super.onCreate(savedInstanceState, persistentState);
@@ -24,16 +25,18 @@ public Toolbar toolbar;
 
     public void setActionBar(Activity activity, boolean BotonUp) {
 
-        toolbar=(Toolbar) findViewById(R.id.miActionBar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(BotonUp);
-
-        ImageView imgFavoritos = (ImageView) findViewById(R.id.imgFavoritos);
+        toolbar = findViewById(R.id.miActionBar);
+        if (toolbar != null) {
+            setSupportActionBar(toolbar);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(BotonUp);
+        }
+        ImageView imgFavoritos = findViewById(R.id.imgFavoritos);
         imgFavoritos.setOnClickListener(v -> {
             Intent intentFavoritos = new Intent(activity, FavoritosActivity.class);
             startActivity(intentFavoritos);
         });
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_actionbar, menu);
@@ -44,14 +47,15 @@ public Toolbar toolbar;
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menuContacto:
-                Intent intentContacto= new Intent(this, ContactoActivity.class);
+                Intent intentContacto = new Intent(this, ContactoActivity.class);
                 startActivity(intentContacto);
                 break;
             case R.id.menuAcercaDe:
-                Intent intentAcercaDe= new Intent(this, AcercaDeActivity.class);
+                Intent intentAcercaDe = new Intent(this, AcercaDeActivity.class);
                 startActivity(intentAcercaDe);
                 break;
-        };
+        }
+        ;
         return super.onOptionsItemSelected(item);
     }
 }

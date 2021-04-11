@@ -1,18 +1,14 @@
-package com.dossis.curso3semana4.Activitys;
+package com.dossis.curso3semana4.activitys;
 
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
-import com.dossis.curso3semana4.Adapter.MascotaAdapter;
-import com.dossis.curso3semana4.Adapter.PageAdapter;
-import com.dossis.curso3semana4.POJO.Mascota;
-import com.dossis.curso3semana4.PerfilFragment;
 import com.dossis.curso3semana4.R;
-import com.dossis.curso3semana4.RecyclerviewFragment;
+import com.dossis.curso3semana4.adapter.PageAdapter;
+import com.dossis.curso3semana4.fragments.PerfilFragment;
+import com.dossis.curso3semana4.fragments.RecyclerviewFragment;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;

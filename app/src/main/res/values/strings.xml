@@ -13,14 +13,7 @@
     <string name="menu_contacto">Contacto</string>
     <string name="menu_acercade">Acerca de</string>
     <string name="title_activity_contacto">ContactoActivity</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="mensaje_enviado">Se envió correctamente el email.</string>
     <string name="mensaje_no_enviado">No se pudo envíar el mensaje.</string>
     <string name="asunto_contacto">\"Contacto \"</string>
@@ -29,4 +22,9 @@
     <string name="acercade2">Entre mis muchos proyectos, tengo 35 proyectos finalizados en todas las ramas, web, ASP.NET, c#, vb.net, c++, Uniface, Microstrategy,  Android, Java, css, js, videojuegos, bases de datos, business intelligent, macros office, flash, svgs, programación gráfica, QA, soporte, Python, IA, IOT, localización indoor, ticketing, etc.</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email_hint_nombre">Nombre</string>
+    <string name="email_hint_email">Email</string>
+    <string name="email_hint_mensaje">Mensaje</string>
+    <string name="mi_mascota">Mi mascota</string>
+    <string name="env_e_un_correo_al_contacto">Envíe un correo al contacto.</string>
 </resources>

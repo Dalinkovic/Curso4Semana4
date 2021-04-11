@@ -1,4 +1,4 @@
-package com.dossis.curso3semana4.Adapter;
+package com.dossis.curso3semana4.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.RecyclerView.ViewHolder;
 
 import com.dossis.curso3semana4.R;
-import com.dossis.curso3semana4.POJO.Mascota;
+import com.dossis.curso3semana4.models.Mascota;
 
 import java.util.ArrayList;
 
@@ -21,10 +21,10 @@ public class MascotaAdapter extends RecyclerView.Adapter<MascotaAdapter.MascotaV
     boolean permitirLike = false;
     boolean versionReducida = false;
 
-    public MascotaAdapter(ArrayList<Mascota> mascotas, boolean permitirLike,boolean versionReducida) {
+    public MascotaAdapter(ArrayList<Mascota> mascotas, boolean permitirLike, boolean versionReducida) {
         this.mascotas = mascotas;
         this.permitirLike = permitirLike;
-        this.versionReducida=versionReducida;
+        this.versionReducida = versionReducida;
     }
 
     @NonNull
@@ -55,8 +55,7 @@ public class MascotaAdapter extends RecyclerView.Adapter<MascotaAdapter.MascotaV
         } else {
             mascotaViewHolder.imgHuesoBlanco.setVisibility(View.INVISIBLE);
         }
-        if(versionReducida)
-        {
+        if (versionReducida) {
             mascotaViewHolder.tvNombre.setVisibility(View.GONE);
         }
     }
@@ -67,16 +66,17 @@ public class MascotaAdapter extends RecyclerView.Adapter<MascotaAdapter.MascotaV
     }
 
     public static class MascotaViewHolder extends ViewHolder {
-        private ImageView imgFoto, imgHuesoBlanco, imgHuestoAmarillo;
+        private ImageView imgFoto;
+        private ImageView imgHuesoBlanco;
         private TextView tvNombre, tvContadorLikes;
 
         public MascotaViewHolder(@NonNull View itemView) {
             super(itemView);
-            imgFoto = (ImageView) itemView.findViewById(R.id.imgFoto);
-            imgHuesoBlanco = (ImageView) itemView.findViewById(R.id.imgHuesoBlanco);
-            imgHuestoAmarillo = (ImageView) itemView.findViewById(R.id.imgHuestoAmarillo);
-            tvNombre = (TextView) itemView.findViewById(R.id.tvNombre);
-            tvContadorLikes = (TextView) itemView.findViewById(R.id.tvContadorLikes);
+            imgFoto = itemView.findViewById(R.id.imgFoto);
+            imgHuesoBlanco = itemView.findViewById(R.id.imgHuesoBlanco);
+            ImageView imgHuestoAmarillo = itemView.findViewById(R.id.imgHuestoAmarillo);
+            tvNombre = itemView.findViewById(R.id.tvNombre);
+            tvContadorLikes = itemView.findViewById(R.id.tvContadorLikes);
         }
     }
 

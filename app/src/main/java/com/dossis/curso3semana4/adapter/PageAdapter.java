@@ -1,4 +1,4 @@
-package com.dossis.curso3semana4.Adapter;
+package com.dossis.curso3semana4.adapter;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -12,7 +12,7 @@ public class PageAdapter extends FragmentPagerAdapter {
 
     public PageAdapter(@NonNull FragmentManager fm, ArrayList<Fragment> fragments) {
         super(fm);
-        this.fragments=fragments;
+        this.fragments = fragments;
     }
 
     @NonNull

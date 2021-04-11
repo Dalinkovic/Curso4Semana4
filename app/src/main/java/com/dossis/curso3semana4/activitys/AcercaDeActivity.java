@@ -1,4 +1,4 @@
-package com.dossis.curso3semana4.Activitys;
+package com.dossis.curso3semana4.activitys;
 
 import android.os.Bundle;
 

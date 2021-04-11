@@ -1,4 +1,4 @@
-package Services;
+package services;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -17,16 +17,15 @@ public class JavaMailAPI extends AsyncTask<Void,Void,Void>  {
 
 
     //Variables
-    private Context mContext;
-    private Session mSession;
+    private final Context mContext;
 
-    private String mEmail;
-    private String mSubject;
-    private String mMessage;
+    private final String mEmail;
+    private final String mSubject;
+    private final String mMessage;
 
     private ProgressDialog mProgressDialog;
 
-    private OnTaskCompleted listener;
+    private final OnTaskCompleted listener;
     private boolean result;
     //Constructor
     public JavaMailAPI(Context mContext, String mEmail, String mSubject, String mMessage) {
@@ -78,7 +77,8 @@ public class JavaMailAPI extends AsyncTask<Void,Void,Void>  {
         props.put("mail.smtp.auth", "true");
 
         //Creating a new session
-        mSession = Session.getDefaultInstance(props,
+        //Authenticating the password
+        Session mSession = Session.getDefaultInstance(props,
                 new javax.mail.Authenticator() {
                     //Authenticating the password
                     protected PasswordAuthentication getPasswordAuthentication() {

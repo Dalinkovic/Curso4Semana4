@@ -1,4 +1,4 @@
-package com.dossis.curso3semana4.Activitys;
+package com.dossis.curso3semana4.activitys;
 
 import android.os.Bundle;
 import android.view.View;
@@ -8,7 +8,7 @@ import com.dossis.curso3semana4.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
-import Services.JavaMailAPI;
+import services.JavaMailAPI;
 
 public class ContactoActivity extends BaseActivity implements JavaMailAPI.OnTaskCompleted {
 
@@ -22,31 +22,28 @@ public class ContactoActivity extends BaseActivity implements JavaMailAPI.OnTask
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contacto);
 
-        if (toolbar==null) {setActionBar(this,true);}
+        if (toolbar == null) {
+            setActionBar(this, true);
+        }
 
         tvMensaje = findViewById(R.id.tvMensaje);
         tvEmail = findViewById(R.id.tvEmail);
         tvNombre = findViewById(R.id.tvNombre);
 
         FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                viewclick = view;
-
-
-                String nombre = tvNombre.getText().toString();
-                String email = tvEmail.getText().toString();
-                String mensaje = tvMensaje.getText().toString();
-                JavaMailAPI jm = new JavaMailAPI(ContactoActivity.this, email, getString(R.string.asunto_contacto) + nombre, mensaje);
-                jm.execute();
-            }
+        fab.setOnClickListener(view -> {
+            viewclick = view;
+            String nombre = tvNombre.getText().toString();
+            String email = tvEmail.getText().toString();
+            String mensaje = tvMensaje.getText().toString();
+            JavaMailAPI jm = new JavaMailAPI(ContactoActivity.this, email, getString(R.string.asunto_contacto) + nombre, mensaje);
+            jm.execute();
         });
     }
 
     @Override
     public void onTaskCompleted(boolean result) {
-        String mensaje = "No se ha ejecutado";
+        String mensaje;
         if (result) {
             mensaje = getString(R.string.mensaje_enviado);
         } else {

@@ -4,18 +4,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_below="@+id/miActionBar">
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/primary_dark"
-        android:gravity="center"
-        android:text="@string/vote_por_su_perro_favorito"
-        android:textColor="@color/accent"
-        android:textSize="18sp" />
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/vote_por_su_perro_favorito"
+            android:textSize="@dimen/fuente_cabecera" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvMascotas"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
+    </LinearLayout>
 </FrameLayout>

@@ -3,15 +3,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-android:layout_below="@+id/miActionBar"
-
+    android:layout_below="@+id/miActionBar"
     tools:context=".PerfilFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Perfil de mascota"
-        android:layout_marginTop="50dp"/>
+        android:layout_height="wrap_content"
+        android:background="@color/primary_dark"
+        android:gravity="center"
+        android:text="Mi mascota"
+        android:textColor="@color/accent"
+        android:textSize="18sp" />
 
+    <!--
+    <ImageView
+        android:id="@+id/imgFoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/imagen_de_la_mascota"
+        android:src="@drawable/perro1" />
+-->
+
+        <include
+            android:id="@+id/layoutPerritoContainer"
+            layout="@layout/perrito_container"
+            />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPerfil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
 </FrameLayout>

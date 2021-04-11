@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 public class RecyclerviewFragment extends Fragment
 {
-    public static ArrayList mascotas;
+    public static ArrayList mascotasVotacion;
     private RecyclerView rvMascotas;
 
     @Nullable
@@ -34,16 +34,16 @@ public class RecyclerviewFragment extends Fragment
     }
 
     private void crearArrayMascotas() {
-        if (mascotas == null) {
-            mascotas = new ArrayList<Mascota>();
-            mascotas.add(new Mascota(1, "Rufo", 0, R.drawable.perro1));
-            mascotas.add(new Mascota(2, "Chicho", 0, R.drawable.perro2));
-            mascotas.add(new Mascota(3, "Luisma", 0, R.drawable.perro3));
-            mascotas.add(new Mascota(4, "Baraja", 0, R.drawable.perro4));
-            mascotas.add(new Mascota(5, "Rajoy", 0, R.drawable.perro5));
-            mascotas.add(new Mascota(6, "Mourinho", 0, R.drawable.perro6));
-            mascotas.add(new Mascota(7, "Ojopipa", 0, R.drawable.perro7));
-            mascotas.add(new Mascota(8, "Carahuevo", 0, R.drawable.perro8));
+        if (mascotasVotacion == null) {
+            mascotasVotacion = new ArrayList<Mascota>();
+            mascotasVotacion.add(new Mascota(1, "Rufo", 0, R.drawable.perro1));
+            mascotasVotacion.add(new Mascota(2, "Chicho", 0, R.drawable.perro2));
+            mascotasVotacion.add(new Mascota(3, "Luisma", 0, R.drawable.perro3));
+            mascotasVotacion.add(new Mascota(4, "Baraja", 0, R.drawable.perro4));
+            mascotasVotacion.add(new Mascota(5, "Rajoy", 0, R.drawable.perro5));
+            mascotasVotacion.add(new Mascota(6, "Mourinho", 0, R.drawable.perro6));
+            mascotasVotacion.add(new Mascota(7, "Ojopipa", 0, R.drawable.perro7));
+            mascotasVotacion.add(new Mascota(8, "Carahuevo", 0, R.drawable.perro8));
         }
 
     }
@@ -56,7 +56,7 @@ public class RecyclerviewFragment extends Fragment
     }
 
     private void inicializarAdapter() {
-        MascotaAdapter adapter = new MascotaAdapter(mascotas, true);
+        MascotaAdapter adapter = new MascotaAdapter(mascotasVotacion, true,false);
         rvMascotas.setAdapter(adapter);
     }
 }

@@ -11,7 +11,7 @@ import com.dossis.curso3semana4.R;
 import java.util.ArrayList;
 import java.util.Collections;
 
-import static com.dossis.curso3semana4.RecyclerviewFragment.mascotas;
+import static com.dossis.curso3semana4.RecyclerviewFragment.mascotasVotacion;
 
 
 public class FavoritosActivity extends BaseActivity {
@@ -34,7 +34,7 @@ public class FavoritosActivity extends BaseActivity {
 
 
     private void crearArrayMascotas() {
-        mascotasOrdenadas = (ArrayList) mascotas.clone();
+        mascotasOrdenadas = (ArrayList) mascotasVotacion.clone();
         Collections.sort(mascotasOrdenadas);
         mascotasOrdenadas.subList(5, mascotasOrdenadas.size()).clear();
     }
@@ -47,7 +47,7 @@ public class FavoritosActivity extends BaseActivity {
     }
 
     private void inicializarAdapter() {
-        MascotaAdapter adapter = new MascotaAdapter(mascotasOrdenadas,false);
+        MascotaAdapter adapter = new MascotaAdapter(mascotasOrdenadas,false,false);
         rvMascotas.setAdapter(adapter);
 
     }

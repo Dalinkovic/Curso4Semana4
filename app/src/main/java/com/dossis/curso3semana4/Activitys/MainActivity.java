@@ -19,8 +19,6 @@ import java.util.ArrayList;
 
 public class MainActivity extends BaseActivity {
 
-
-
     private TabLayout tabLayout;
     private ViewPager viewPager;
 
@@ -36,9 +34,7 @@ public class MainActivity extends BaseActivity {
         tabLayout = findViewById(R.id.tabLayout);
         viewPager = findViewById(R.id.viewPager);
         setUpViewPager();
-        /*crearArrayMascotas();
-        asociarRecyclerView();
-        inicializarAdapter();*/
+
     }
 
     private ArrayList<Fragment> agregarFragments() {
@@ -51,8 +47,8 @@ public class MainActivity extends BaseActivity {
     private void setUpViewPager() {
         viewPager.setAdapter(new PageAdapter(getSupportFragmentManager(), agregarFragments()));
         tabLayout.setupWithViewPager(viewPager);
-        tabLayout.getTabAt(0).setIcon(R.drawable.star5);
-        tabLayout.getTabAt(1).setIcon(R.drawable.huella);
+        tabLayout.getTabAt(0).setIcon(R.drawable.star);
+        tabLayout.getTabAt(1).setIcon(R.drawable.dog);
     }
 
 }

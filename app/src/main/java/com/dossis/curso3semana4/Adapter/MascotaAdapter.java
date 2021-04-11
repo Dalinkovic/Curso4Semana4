@@ -19,10 +19,12 @@ public class MascotaAdapter extends RecyclerView.Adapter<MascotaAdapter.MascotaV
 
     ArrayList<Mascota> mascotas;
     boolean permitirLike = false;
+    boolean versionReducida = false;
 
-    public MascotaAdapter(ArrayList<Mascota> mascotas, boolean permitirLike) {
+    public MascotaAdapter(ArrayList<Mascota> mascotas, boolean permitirLike,boolean versionReducida) {
         this.mascotas = mascotas;
         this.permitirLike = permitirLike;
+        this.versionReducida=versionReducida;
     }
 
     @NonNull
@@ -52,6 +54,10 @@ public class MascotaAdapter extends RecyclerView.Adapter<MascotaAdapter.MascotaV
             });
         } else {
             mascotaViewHolder.imgHuesoBlanco.setVisibility(View.INVISIBLE);
+        }
+        if(versionReducida)
+        {
+            mascotaViewHolder.tvNombre.setVisibility(View.GONE);
         }
     }
 

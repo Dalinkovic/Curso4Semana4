@@ -8,7 +8,7 @@ import com.dossis.curso3semana4.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
-import services.JavaMailAPI;
+import com.dossis.curso3semana4.services.JavaMailAPI;
 
 public class ContactoActivity extends BaseActivity implements JavaMailAPI.OnTaskCompleted {
 

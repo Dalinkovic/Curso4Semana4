@@ -1,4 +1,4 @@
-package com.dossis.curso3semana4.adapter;
+package com.dossis.curso3semana5.adapter;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;

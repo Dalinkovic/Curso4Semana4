@@ -1,4 +1,4 @@
-package com.dossis.curso3semana4.fragments;
+package com.dossis.curso3semana5.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,13 +12,13 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.dossis.curso3semana4.R;
-import com.dossis.curso3semana4.adapter.MascotaAdapter;
-import com.dossis.curso3semana4.models.Mascota;
+import com.dossis.curso3semana5.R;
+import com.dossis.curso3semana5.adapter.MascotaAdapter;
+import com.dossis.curso3semana5.models.Mascota;
 
 import java.util.ArrayList;
 
-import static com.dossis.curso3semana4.fragments.RecyclerviewFragment.mascotasVotacion;
+import static com.dossis.curso3semana5.fragments.RecyclerviewFragment.mascotasVotacion;
 
 public class PerfilFragment extends Fragment {
 

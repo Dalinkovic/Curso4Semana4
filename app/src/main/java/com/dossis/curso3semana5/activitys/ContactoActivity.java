@@ -1,14 +1,14 @@
-package com.dossis.curso3semana4.activitys;
+package com.dossis.curso3semana5.activitys;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.dossis.curso3semana4.R;
+import com.dossis.curso3semana5.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
-import com.dossis.curso3semana4.services.JavaMailAPI;
+import com.dossis.curso3semana5.services.JavaMailAPI;
 
 public class ContactoActivity extends BaseActivity implements JavaMailAPI.OnTaskCompleted {
 

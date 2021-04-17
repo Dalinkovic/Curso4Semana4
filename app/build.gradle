@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId 'com.dossis.curso3semana4'
+        applicationId 'com.dossis.curso3semana5'
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 1

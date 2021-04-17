@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.dossis.curso3semana4.activitys.FavoritosActivity">
+    tools:context="com.dossis.curso3semana5.activitys.FavoritosActivity">
 
     <include
         android:id="@+id/miActionBar"

@@ -1,17 +1,17 @@
-package com.dossis.curso3semana4.activitys;
+package com.dossis.curso3semana5.activitys;
 
 import android.os.Bundle;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.dossis.curso3semana4.R;
-import com.dossis.curso3semana4.adapter.MascotaAdapter;
+import com.dossis.curso3semana5.R;
+import com.dossis.curso3semana5.adapter.MascotaAdapter;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
-import static com.dossis.curso3semana4.fragments.RecyclerviewFragment.mascotasVotacion;
+import static com.dossis.curso3semana5.fragments.RecyclerviewFragment.mascotasVotacion;
 
 
 public class FavoritosActivity extends BaseActivity {

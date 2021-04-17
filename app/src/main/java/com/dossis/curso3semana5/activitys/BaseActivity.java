@@ -1,4 +1,4 @@
-package com.dossis.curso3semana4.activitys;
+package com.dossis.curso3semana5.activitys;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -12,7 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.dossis.curso3semana4.R;
+import com.dossis.curso3semana5.R;
 
 public class BaseActivity extends AppCompatActivity {
 

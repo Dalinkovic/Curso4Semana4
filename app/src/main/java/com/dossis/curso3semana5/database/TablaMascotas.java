@@ -16,16 +16,22 @@ public class TablaMascotas {
     private static final String TABLA_MASCOTAS_COLUMN_LIKES="Likes";
     private static final String TABLA_MASCOTAS_COLUMN_IDFOTO="IdFoto";
 
-    public static final String SQL_CREATE_TABLA_MASCOTAS = String.format("CREATE TABLE IF NOT EXISTS %s ( %s INTEGER PRIMARY KEY, %s TEXT, %s INTEGER, %s TEXT)",
+    public static final String SQL_CREATE_TABLA_MASCOTAS = String.format(
+            "CREATE TABLE IF NOT EXISTS %s ( %s INTEGER PRIMARY KEY, %s TEXT, %s INTEGER, %s TEXT)",
             TABLA_MASCOTAS,
             TABLA_MASCOTAS_COLUMN_ID,
             TABLA_MASCOTAS_COLUMN_NOMBRE,
             TABLA_MASCOTAS_COLUMN_LIKES,
             TABLA_MASCOTAS_COLUMN_IDFOTO);
 
-    public static final String UPDATE_LIKES_BY_ID="UPDATE TMASCOTAS SET Likes = Likes + 1 WHERE ID = ";
-    public static final String SELECT_ORDER_ID ="SELECT * FROM TMASCOTAS ORDER BY ID";
-    public static final String SELECT_5_FAVORITOS ="SELECT * FROM TMASCOTAS ORDER BY Likes DESC LIMIT 5";
+    public static final String UPDATE_LIKES_BY_ID="UPDATE "+ TABLA_MASCOTAS +
+            " SET "+ TABLA_MASCOTAS_COLUMN_LIKES + " = "+ TABLA_MASCOTAS_COLUMN_LIKES + " + 1 " +
+            " WHERE "+TABLA_MASCOTAS_COLUMN_ID+" = ";
+
+    public static final String SELECT_ORDER_ID ="SELECT * FROM " + TABLA_MASCOTAS +
+                                                " ORDER BY " + TABLA_MASCOTAS_COLUMN_ID;
+    public static final String SELECT_5_FAVORITOS ="SELECT * FROM "+TABLA_MASCOTAS+
+                                                " ORDER BY " +TABLA_MASCOTAS_COLUMN_LIKES+" DESC LIMIT 5";
 
     public void crearTabla(SQLiteDatabase db)
     {

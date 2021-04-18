@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.RecyclerView.ViewHolder;
 
 import com.dossis.curso3semana5.R;
+import com.dossis.curso3semana5.database.*;
 import com.dossis.curso3semana5.models.Mascota;
 
 import java.util.ArrayList;
@@ -25,6 +26,7 @@ public class MascotaAdapter extends RecyclerView.Adapter<MascotaAdapter.MascotaV
         this.mascotas = mascotas;
         this.permitirLike = permitirLike;
         this.versionReducida = versionReducida;
+
     }
 
     @NonNull
@@ -48,7 +50,10 @@ public class MascotaAdapter extends RecyclerView.Adapter<MascotaAdapter.MascotaV
 
                 @Override
                 public void onClick(View v) {
-                    mascota.addLike();
+
+                    TablaMascotas tablaMascotas = new TablaMascotas();
+                    tablaMascotas.addLike(v.getContext(), mascota.getId());
+                    mascotas = tablaMascotas.getMascotasOrderedId(v.getContext());
                     notifyDataSetChanged();
                 }
             });

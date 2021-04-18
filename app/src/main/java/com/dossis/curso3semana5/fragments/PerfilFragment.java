@@ -17,8 +17,8 @@ import com.dossis.curso3semana5.adapter.MascotaAdapter;
 import com.dossis.curso3semana5.models.Mascota;
 
 import java.util.ArrayList;
+import com.dossis.curso3semana5.database.*;
 
-import static com.dossis.curso3semana5.fragments.RecyclerviewFragment.mascotasVotacion;
 
 public class PerfilFragment extends Fragment {
 
@@ -40,6 +40,8 @@ public class PerfilFragment extends Fragment {
 
         View v = inflater.inflate(R.layout.fragment_perfil, container, false);
 
+        TablaMascotas tablaMascotas=new TablaMascotas();
+        ArrayList<Mascota> mascotasVotacion = tablaMascotas.getMascotasOrderedId(v.getContext());
         Mascota miMascota = (Mascota) mascotasVotacion.get(0);
 
         TextView tvNombre = v.findViewById(R.id.tvNombre);

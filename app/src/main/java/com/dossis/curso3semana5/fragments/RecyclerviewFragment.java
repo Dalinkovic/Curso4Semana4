@@ -13,13 +13,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.dossis.curso3semana5.R;
 import com.dossis.curso3semana5.adapter.MascotaAdapter;
-import com.dossis.curso3semana5.models.Mascota;
+import com.dossis.curso3semana5.database.*;
 
 import java.util.ArrayList;
 
 public class RecyclerviewFragment extends Fragment
 {
-    public static ArrayList mascotasVotacion;
+    public  ArrayList mascotasVotacion;
     private RecyclerView rvMascotas;
 
     @Nullable
@@ -35,17 +35,11 @@ public class RecyclerviewFragment extends Fragment
     }
 
     private void crearArrayMascotas() {
-        if (mascotasVotacion == null) {
-            mascotasVotacion = new ArrayList<Mascota>();
-            mascotasVotacion.add(new Mascota(1, "Rufo", 0, R.drawable.perro1));
-            mascotasVotacion.add(new Mascota(2, "Chicho", 0, R.drawable.perro2));
-            mascotasVotacion.add(new Mascota(3, "Luisma", 0, R.drawable.perro3));
-            mascotasVotacion.add(new Mascota(4, "Baraja", 0, R.drawable.perro4));
-            mascotasVotacion.add(new Mascota(5, "Rajoy", 0, R.drawable.perro5));
-            mascotasVotacion.add(new Mascota(6, "Mourinho", 0, R.drawable.perro6));
-            mascotasVotacion.add(new Mascota(7, "Ojopipa", 0, R.drawable.perro7));
-            mascotasVotacion.add(new Mascota(8, "Carahuevo", 0, R.drawable.perro8));
-        }
+
+
+     TablaMascotas tablaMascotas= new TablaMascotas();
+        mascotasVotacion= tablaMascotas.getMascotasOrderedId(getContext());
+
 
     }
 

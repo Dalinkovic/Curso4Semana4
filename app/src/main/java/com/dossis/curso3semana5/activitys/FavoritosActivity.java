@@ -1,5 +1,6 @@
 package com.dossis.curso3semana5.activitys;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -7,11 +8,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.dossis.curso3semana5.R;
 import com.dossis.curso3semana5.adapter.MascotaAdapter;
+import com.dossis.curso3semana5.database.*;
 
 import java.util.ArrayList;
-import java.util.Collections;
-
-import static com.dossis.curso3semana5.fragments.RecyclerviewFragment.mascotasVotacion;
 
 
 public class FavoritosActivity extends BaseActivity {
@@ -28,17 +27,18 @@ public class FavoritosActivity extends BaseActivity {
             setActionBar(this, true);
         }
 
-        crearArrayMascotas();
+        crearArrayMascotas(this);
         asociarRecyclerView();
         inicializarAdapter();
 
     }
 
 
-    private void crearArrayMascotas() {
-        mascotasOrdenadas = (ArrayList) mascotasVotacion.clone();
-        Collections.sort(mascotasOrdenadas);
-        mascotasOrdenadas.subList(5, mascotasOrdenadas.size()).clear();
+    private void crearArrayMascotas(Context context) {
+        TablaMascotas tablaMascotas = new TablaMascotas();
+        mascotasOrdenadas = tablaMascotas.getMascotasOrderedLikes(this);
+
+
     }
 
     private void asociarRecyclerView() {

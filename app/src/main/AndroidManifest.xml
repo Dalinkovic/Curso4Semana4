@@ -10,12 +10,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Curso3Semana4">
+        android:theme="@style/Theme.Curso3Semana5">
         <activity
             android:name="com.dossis.curso3semana5.activitys.ContactoActivity"
             android:label="@string/title_activity_contacto"
             android:parentActivityName="com.dossis.curso3semana5.activitys.MainActivity"
-            android:theme="@style/Theme.Curso3Semana4.NoActionBar">
+            android:theme="@style/Theme.Curso3Semana5.NoActionBar">
 
             <!-- Soporte para versiones 4.0 o menores -->
             <meta-data

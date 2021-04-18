@@ -1,7 +1,8 @@
 # Curso3Semana5
 
 <p>Se incluye sqlite para la tabla de likes. Creo una clase aislada Tabla_Mascotas que gestiona todo lo relacionado con su entidad.</p>
-```java
+
+
 public class TablaMascotas {
 
     private static final String TABLA_MASCOTAS="TMASCOTAS";

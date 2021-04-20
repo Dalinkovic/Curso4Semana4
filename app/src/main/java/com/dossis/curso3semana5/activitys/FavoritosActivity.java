@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.dossis.curso3semana5.R;
 import com.dossis.curso3semana5.adapter.MascotaAdapter;
 import com.dossis.curso3semana5.database.*;
-
 import java.util.ArrayList;
 
 

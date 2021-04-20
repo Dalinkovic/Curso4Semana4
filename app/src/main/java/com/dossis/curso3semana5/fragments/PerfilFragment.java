@@ -14,11 +14,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.dossis.curso3semana5.R;
 import com.dossis.curso3semana5.adapter.MascotaAdapter;
-import com.dossis.curso3semana5.models.Mascota;
+import com.dossis.curso3semana5.pojo.Mascota;
 
 import java.util.ArrayList;
 import com.dossis.curso3semana5.database.*;
-
 
 public class PerfilFragment extends Fragment {
 

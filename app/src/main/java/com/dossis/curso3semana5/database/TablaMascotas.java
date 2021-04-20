@@ -4,7 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import com.dossis.curso3semana5.models.Mascota;
+import com.dossis.curso3semana5.pojo.Mascota;
 
 import java.util.ArrayList;
 
@@ -42,6 +42,7 @@ public class TablaMascotas {
         DatabaseHelper dbHelper = new DatabaseHelper(ctx);
         SQLiteDatabase db= dbHelper.getWritableDatabase();
         db.execSQL(UPDATE_LIKES_BY_ID + id);
+        db.close();
     }
 
     public ArrayList<Mascota> getMascotasOrderedId(Context context)
@@ -66,6 +67,7 @@ public class TablaMascotas {
                     cursor.getInt(cursor.getColumnIndex(TABLA_MASCOTAS_COLUMN_LIKES)),
                     cursor.getInt(cursor.getColumnIndex(TABLA_MASCOTAS_COLUMN_IDFOTO))));
         }
+        db.close();
         return mascotas;
     }
     public void insertMascota(Context ctx,int id, String nombre, int idFoto)
@@ -79,6 +81,7 @@ public class TablaMascotas {
         cv.put(TABLA_MASCOTAS_COLUMN_LIKES, 0);
         cv.put(TABLA_MASCOTAS_COLUMN_IDFOTO, idFoto);
         db.insert(TABLA_MASCOTAS, null, cv);
+        db.close();
     }
 
 }

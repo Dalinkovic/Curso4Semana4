@@ -11,9 +11,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.RecyclerView.ViewHolder;
 
 import com.dossis.curso3semana5.R;
+import com.dossis.curso3semana5.pojo.Mascota;
 import com.dossis.curso3semana5.database.*;
-import com.dossis.curso3semana5.models.Mascota;
-
 import java.util.ArrayList;
 
 public class MascotaAdapter extends RecyclerView.Adapter<MascotaAdapter.MascotaViewHolder> {

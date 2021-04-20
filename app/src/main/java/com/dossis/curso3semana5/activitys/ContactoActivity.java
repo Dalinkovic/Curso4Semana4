@@ -1,16 +1,17 @@
 package com.dossis.curso3semana5.activitys;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
 import com.dossis.curso3semana5.R;
+import com.dossis.curso3semana5.interfaces.IContactoActivity;
+import com.dossis.curso3semana5.services.JavaMailAPI;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
-import com.dossis.curso3semana5.services.JavaMailAPI;
-
-public class ContactoActivity extends BaseActivity implements JavaMailAPI.OnTaskCompleted {
+public class ContactoActivity extends BaseActivity implements JavaMailAPI.OnTaskCompleted , IContactoActivity {
 
     TextView tvNombre;
     TextView tvEmail;
@@ -25,21 +26,10 @@ public class ContactoActivity extends BaseActivity implements JavaMailAPI.OnTask
         if (toolbar == null) {
             setActionBar(this, true);
         }
+        setupFab();
 
-        tvMensaje = findViewById(R.id.tvMensaje);
-        tvEmail = findViewById(R.id.tvEmail);
-        tvNombre = findViewById(R.id.tvNombre);
-
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(view -> {
-            viewclick = view;
-            String nombre = tvNombre.getText().toString();
-            String email = tvEmail.getText().toString();
-            String mensaje = tvMensaje.getText().toString();
-            JavaMailAPI jm = new JavaMailAPI(ContactoActivity.this, email, getString(R.string.asunto_contacto) + nombre, mensaje);
-            jm.execute();
-        });
     }
+
 
     @Override
     public void onTaskCompleted(boolean result) {
@@ -55,4 +45,20 @@ public class ContactoActivity extends BaseActivity implements JavaMailAPI.OnTask
 
     }
 
+    @Override
+    public void setupFab() {
+        tvMensaje = findViewById(R.id.tvMensaje);
+        tvEmail = findViewById(R.id.tvEmail);
+        tvNombre = findViewById(R.id.tvNombre);
+
+        FloatingActionButton fab = findViewById(R.id.fab);
+        fab.setOnClickListener(view -> {
+            viewclick = view;
+            String nombre = tvNombre.getText().toString();
+            String email = tvEmail.getText().toString();
+            String mensaje = tvMensaje.getText().toString();
+            JavaMailAPI jm = new JavaMailAPI(ContactoActivity.this, email, getString(R.string.asunto_contacto) + nombre, mensaje);
+            jm.execute();
+        });
+    }
 }

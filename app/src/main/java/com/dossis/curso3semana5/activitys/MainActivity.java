@@ -8,11 +8,10 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.dossis.curso3semana5.R;
 import com.dossis.curso3semana5.adapter.PageAdapter;
-import com.dossis.curso3semana5.database.*;
 import com.dossis.curso3semana5.fragments.PerfilFragment;
 import com.dossis.curso3semana5.fragments.RecyclerviewFragment;
 import com.google.android.material.tabs.TabLayout;
-
+import com.dossis.curso3semana5.database.*;
 import java.util.ArrayList;
 
 public class MainActivity extends BaseActivity {

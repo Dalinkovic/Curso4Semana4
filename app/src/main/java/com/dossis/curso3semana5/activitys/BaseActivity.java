@@ -2,7 +2,6 @@ package com.dossis.curso3semana5.activitys;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.view.Menu;
@@ -14,7 +13,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.dossis.curso3semana5.R;
-import com.dossis.curso3semana5.database.DatabaseHelper;
 
 public class BaseActivity extends AppCompatActivity {
 

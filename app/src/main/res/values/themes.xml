@@ -1,6 +1,6 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="Theme.Curso3Semana5" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Theme.Curso4Semana1" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryDark">@color/primary_dark</item>
         <item name="colorAccent">@color/accent</item>
@@ -11,12 +11,12 @@
         <item name="colorControlNormal">@color/accent</item>
     </style>
 
-    <style name="Theme.Curso3Semana5.NoActionBar">
+    <style name="Theme.Curso4Semana1.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="Theme.Curso3Semana5.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.Curso4Semana1.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <style name="Theme.Curso3Semana5.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="Theme.Curso4Semana1.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

@@ -4,17 +4,50 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Curso4Semana1">
+        <activity android:name=".activitys.LoginActivity">
+            <intent-filter android:scheme="http">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="/oauth2redirect"
+                    android:scheme="com.dossis.curso4semana1" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="com.dossis.curso4semana1"
+                    android:pathPrefix="/oauth2redirect"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <!--
+<action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:host="com.dossis.curso4semana1" android:scheme="appSchema"/>
+        -->
         <activity
-            android:name="com.dossis.curso4semana1.activitys.ContactoActivity"
+            android:name=".activitys.ContactoActivity"
             android:label="@string/title_activity_contacto"
-            android:parentActivityName="com.dossis.curso4semana1.activitys.MainActivity"
+            android:parentActivityName=".activitys.MainActivity"
             android:theme="@style/Theme.Curso4Semana1.NoActionBar">
 
             <!-- Soporte para versiones 4.0 o menores -->
@@ -23,8 +56,8 @@
                 android:value="com.dossis.curso4semana1.activitys.MainActivity" />
         </activity>
         <activity
-            android:name="com.dossis.curso4semana1.activitys.AcercaDeActivity"
-            android:parentActivityName="com.dossis.curso4semana1.activitys.MainActivity">
+            android:name=".activitys.AcercaDeActivity"
+            android:parentActivityName=".activitys.MainActivity">
 
             <!-- Soporte para versiones 4.0 o menores -->
             <meta-data
@@ -32,15 +65,15 @@
                 android:value="com.dossis.curso4semana1.activitys.MainActivity" />
         </activity>
         <activity
-            android:name="com.dossis.curso4semana1.activitys.FavoritosActivityView"
-            android:parentActivityName="com.dossis.curso4semana1.activitys.MainActivity">
+            android:name=".activitys.FavoritosActivityView"
+            android:parentActivityName=".activitys.MainActivity">
 
             <!-- Soporte para versiones 4.0 o menores -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.dossis.curso4semana1.activitys.MainActivity" />
         </activity>
-        <activity android:name="com.dossis.curso4semana1.activitys.MainActivity">
+        <activity android:name=".activitys.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

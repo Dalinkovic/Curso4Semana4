@@ -1,5 +1,9 @@
 <resources>
+
     <string name="app_name">Curso4Semana1</string>
+
+    <string name="facebook_app_id">1373075439730615</string>
+
     <string name="imagen_de_la_mascota">Imagen de la mascota</string>
     <string name="nombre_mascota">Nombre</string>
     <string name="dummy_contador_likes">4</string>
@@ -27,4 +31,7 @@
     <string name="email_hint_mensaje">Mensaje</string>
     <string name="mi_mascota">Mi mascota</string>
     <string name="env_e_un_correo_al_contacto">Envíe un correo al contacto.</string>
+    <string name="menu_cuenta">Cuenta</string>
+    <string name="login">LOGIN</string>
+    <string name="usuario">Usuario</string>
 </resources>

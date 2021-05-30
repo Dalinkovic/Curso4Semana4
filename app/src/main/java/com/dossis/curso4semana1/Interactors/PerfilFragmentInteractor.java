@@ -7,7 +7,8 @@ import com.dossis.curso4semana1.adapter.MascotaAdapter;
 import com.dossis.curso4semana1.interfaces.IPerfilFragmentInteractor;
 import com.dossis.curso4semana1.pojo.Mascota;
 import com.dossis.curso4semana1.presenter.PerfilFragmentPresenter;
-import com.dossis.curso4semana1.database.*;
+import com.dossis.curso4semana1.restApi.IGRetrofit;
+import com.dossis.curso4semana1.restApi.Keys;
 
 import java.util.ArrayList;
 
@@ -17,6 +18,8 @@ public class PerfilFragmentInteractor implements IPerfilFragmentInteractor {
     PerfilFragmentPresenter perfilFragmentPresenter;
     Context context;
     Mascota miMascotaPerfil;
+    ArrayList<Mascota> fotosPerfil;
+    MascotaAdapter adapter;
 
     public PerfilFragmentInteractor(PerfilFragmentPresenter perfilFragmentPresenter, Context context) {
         this.perfilFragmentPresenter = perfilFragmentPresenter;
@@ -25,9 +28,13 @@ public class PerfilFragmentInteractor implements IPerfilFragmentInteractor {
 
     @Override
     public void crearAdapter() {
-        MascotaAdapter adapter = new MascotaAdapter(crearArrayMascotas(), false, true);
-
+        fotosPerfil = new ArrayList<>();
+        IGRetrofit igRetrofit = new IGRetrofit(context);
+        adapter = new MascotaAdapter(getMascotasPerfilInstagram(), false, true, context);
+        //El adaptador y las fotos se actualizarán mas tarde cuando termine la consulta.
+        igRetrofit.callMedia(adapter, fotosPerfil);
         resultAdapter(adapter);
+
     }
 
     @Override
@@ -35,35 +42,26 @@ public class PerfilFragmentInteractor implements IPerfilFragmentInteractor {
         this.perfilFragmentPresenter.resultAdapter(adapter);
     }
 
-    private ArrayList<Mascota> crearArrayMascotas() {
-
-        ArrayList<Mascota>    fotosPerfil = new ArrayList<Mascota>();
-            fotosPerfil.add(new Mascota(1, "Rufo", 11, R.drawable.perro1));
-            fotosPerfil.add(new Mascota(2, "", 13, R.drawable.perro1));
-            fotosPerfil.add(new Mascota(3, "", 7, R.drawable.perro1));
-            fotosPerfil.add(new Mascota(4, "", 6, R.drawable.perro1));
-            fotosPerfil.add(new Mascota(5, "", 4, R.drawable.perro1));
-            fotosPerfil.add(new Mascota(6, "", 8, R.drawable.perro1));
-            fotosPerfil.add(new Mascota(7, "", 10, R.drawable.perro1));
-            fotosPerfil.add(new Mascota(8, "", 21, R.drawable.perro1));
-
-
+    private ArrayList<Mascota> getMascotasPerfilInstagram() {
         return fotosPerfil;
     }
 
     @Override
-    public  void crearMascotaPerfilFake()
-    {
-        //Obtengo el primero de la lista ordenada por ID y ese será nuestra mascota del perfil.
-        TablaMascotas tablaMascotas=new TablaMascotas();
-        ArrayList<Mascota> mascotasVotacion = tablaMascotas.getMascotasOrderedId(this.context);
-        miMascotaPerfil = (Mascota) mascotasVotacion.get(0);
+    public void crearMascotaPerfilFake() {
+
+        //Pongo una cualquiera fija
+        miMascotaPerfil = new Mascota();
+        miMascotaPerfil.setIdFoto(R.drawable.coursera);
+        miMascotaPerfil.setNombre(Keys.ACTIVE_USER_NAME);
+        miMascotaPerfil.setUrl(null);
+
         getMascotaPerfil(miMascotaPerfil);
     }
+
     @Override
-    public void getMascotaPerfil(Mascota mascota)
-    {
+    public void getMascotaPerfil(Mascota mascota) {
         perfilFragmentPresenter.getMascotaPerfil(mascota);
     }
+
 
 }

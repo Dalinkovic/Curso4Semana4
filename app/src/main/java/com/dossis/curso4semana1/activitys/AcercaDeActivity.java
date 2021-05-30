@@ -10,6 +10,8 @@ public class AcercaDeActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_acerca_de);
-        if (toolbar==null) {setActionBar(this,true);}
+        if (toolbar == null) {
+            setActionBar(this, true);
+        }
     }
 }

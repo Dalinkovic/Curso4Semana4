@@ -4,11 +4,20 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+
+import com.dossis.curso4semana1.R;
 import com.dossis.curso4semana1.pojo.Mascota;
 
 import java.util.ArrayList;
 
+import retrofit2.http.DELETE;
+
 public class TablaMascotas {
+    Context context;
+
+    public TablaMascotas(Context context) {
+        this.context = context;
+    }
 
     private static final String TABLA_MASCOTAS="TMASCOTAS";
     private static final String TABLA_MASCOTAS_COLUMN_ID="Id";
@@ -33,10 +42,33 @@ public class TablaMascotas {
     public static final String SELECT_5_FAVORITOS ="SELECT * FROM "+TABLA_MASCOTAS+
                                                 " ORDER BY " +TABLA_MASCOTAS_COLUMN_LIKES+" DESC LIMIT 5";
 
-    public void crearTabla(SQLiteDatabase db)
-    {
-        db.execSQL(TablaMascotas.SQL_CREATE_TABLA_MASCOTAS);
+    public static final String DELETE_TABLA_MASCOTAS="DELETE FROM " + TABLA_MASCOTAS;
 
+    public void crearTabla()
+    {
+        DatabaseHelper dbHelper = new DatabaseHelper(context);
+        SQLiteDatabase db= dbHelper.getWritableDatabase();
+
+        db.execSQL(TablaMascotas.SQL_CREATE_TABLA_MASCOTAS);
+        db.close();
+
+        insertarMascotasFake();
+
+    }
+    private void insertarMascotasFake() {
+
+        ArrayList<Mascota> lista=getQueryMascotas(context,SELECT_ORDER_ID);
+
+        if (lista.size()==0) {
+            insertMascota(context, 1, "Rufo", R.drawable.perro1);
+            insertMascota(context, 2, "Chicho", R.drawable.perro2);
+            insertMascota(context, 3, "Luisma", R.drawable.perro3);
+            insertMascota(context, 4, "Baraja", R.drawable.perro4);
+            insertMascota(context, 5, "Rajoy", R.drawable.perro5);
+            insertMascota(context, 6, "Mourinho", R.drawable.perro6);
+            insertMascota(context, 7, "Ojopipa", R.drawable.perro7);
+            insertMascota(context, 8, "Carahuevo", R.drawable.perro8);
+        }
     }
     public void addLike(Context ctx, int id) {
         DatabaseHelper dbHelper = new DatabaseHelper(ctx);
@@ -82,6 +114,15 @@ public class TablaMascotas {
         cv.put(TABLA_MASCOTAS_COLUMN_IDFOTO, idFoto);
         db.insert(TABLA_MASCOTAS, null, cv);
         db.close();
+    }
+
+    public void deleteTablaMascotas(Context ctx)
+    {
+        DatabaseHelper dbHelper = new DatabaseHelper(ctx);
+        SQLiteDatabase db= dbHelper.getWritableDatabase();
+        db.execSQL(DELETE_TABLA_MASCOTAS);
+        db.close();
+
     }
 
 }

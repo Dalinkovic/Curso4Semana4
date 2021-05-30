@@ -1,6 +1,5 @@
 package com.dossis.curso4semana1.activitys;
 
-import android.content.Context;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -8,11 +7,13 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.dossis.curso4semana1.R;
 import com.dossis.curso4semana1.adapter.PageAdapter;
+import com.dossis.curso4semana1.database.TablaMascotas;
 import com.dossis.curso4semana1.fragments.PerfilFragmentView;
 import com.dossis.curso4semana1.fragments.VotacionesFragmentView;
 import com.google.android.material.tabs.TabLayout;
-import com.dossis.curso4semana1.database.*;
+
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class MainActivity extends BaseActivity {
 
@@ -24,7 +25,6 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        insertarMascotasFake(this);
 
         if (toolbar == null) {
             setActionBar(this, false);
@@ -34,20 +34,11 @@ public class MainActivity extends BaseActivity {
         viewPager = findViewById(R.id.viewPager);
         setUpViewPager();
 
-    }
+        new TablaMascotas(this).crearTabla();
 
-    public void insertarMascotasFake(Context context) {
-        TablaMascotas tablaMascotas = new TablaMascotas();
-        tablaMascotas.insertMascota(context, 1, "Rufo", R.drawable.perro1);
-        tablaMascotas.insertMascota(context, 2, "Chicho", R.drawable.perro2);
-        tablaMascotas.insertMascota(context, 3, "Luisma", R.drawable.perro3);
-        tablaMascotas.insertMascota(context, 4, "Baraja", R.drawable.perro4);
-        tablaMascotas.insertMascota(context, 5, "Rajoy", R.drawable.perro5);
-        tablaMascotas.insertMascota(context, 6, "Mourinho", R.drawable.perro6);
-        tablaMascotas.insertMascota(context, 7, "Ojopipa", R.drawable.perro7);
-        tablaMascotas.insertMascota(context, 8, "Carahuevo", R.drawable.perro8);
 
     }
+
 
     private ArrayList<Fragment> agregarFragments() {
         ArrayList<Fragment> fragments = new ArrayList<>();
@@ -58,9 +49,11 @@ public class MainActivity extends BaseActivity {
 
     private void setUpViewPager() {
         viewPager.setAdapter(new PageAdapter(getSupportFragmentManager(), agregarFragments()));
+
         tabLayout.setupWithViewPager(viewPager);
-        tabLayout.getTabAt(0).setIcon(R.drawable.star);
-        tabLayout.getTabAt(1).setIcon(R.drawable.dog);
+        Objects.requireNonNull(tabLayout.getTabAt(0)).setIcon(R.drawable.star);
+        Objects.requireNonNull(tabLayout.getTabAt(1)).setIcon(R.drawable.dog);
     }
+
 
 }

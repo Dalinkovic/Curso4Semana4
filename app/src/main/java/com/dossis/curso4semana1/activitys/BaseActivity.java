@@ -14,8 +14,9 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.dossis.curso4semana1.R;
 
-public class BaseActivity extends AppCompatActivity {
+import java.util.Objects;
 
+public class BaseActivity extends AppCompatActivity {
 
     public Toolbar toolbar;
 
@@ -29,7 +30,7 @@ public class BaseActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.miActionBar);
         if (toolbar != null) {
             setSupportActionBar(toolbar);
-            getSupportActionBar().setDisplayHomeAsUpEnabled(BotonUp);
+            Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(BotonUp);
         }
         ImageView imgFavoritos = findViewById(R.id.imgFavoritos);
         imgFavoritos.setOnClickListener(v -> {
@@ -55,8 +56,12 @@ public class BaseActivity extends AppCompatActivity {
                 Intent intentAcercaDe = new Intent(this, AcercaDeActivity.class);
                 startActivity(intentAcercaDe);
                 break;
+            case R.id.menuCuenta:
+                Intent intentCuenta = new Intent(this, LoginActivity.class);
+                startActivity(intentCuenta);
+                break;
         }
-        ;
+
         return super.onOptionsItemSelected(item);
     }
 }

@@ -23,11 +23,9 @@ public class PerfilFragmentView extends Fragment implements IPerfilFragmentView,
 
     PerfilFragmentPresenter presenter;
     View viewInflater;
-    private RecyclerView rvPerfil;
+    RecyclerView rvPerfil;
 
-    public PerfilFragmentView() {
-
-    }
+    public PerfilFragmentView() {}
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -42,7 +40,6 @@ public class PerfilFragmentView extends Fragment implements IPerfilFragmentView,
 
         presenter = new PerfilFragmentPresenter(this);
 
-
         configurarRecyclerView(viewInflater);
 
 
@@ -56,6 +53,7 @@ public class PerfilFragmentView extends Fragment implements IPerfilFragmentView,
 
     @Override
     public void configurarRecyclerView(View view) {
+
         rvPerfil = view.findViewById(R.id.rvPerfil);
         GridLayoutManager glm = new GridLayoutManager(view.getContext(), 2);
         glm.setOrientation(LinearLayoutManager.VERTICAL);
@@ -66,15 +64,19 @@ public class PerfilFragmentView extends Fragment implements IPerfilFragmentView,
 
     @Override
     public void getNombreMiMascota(String nombre) {
-        TextView tvNombre = viewInflater.findViewById(R.id.tvNombre);
-        tvNombre.setText("pepe");
 
+        TextView tvNombreMascotaPerfil = viewInflater.findViewById(R.id.tvNombreMascotaPerfil);
+        tvNombreMascotaPerfil.setText(nombre);
+        tvNombreMascotaPerfil.setVisibility(View.VISIBLE);
 
     }
 
     @Override
     public void getIdFotoMiMascota(int idFoto) {
+
         ImageView imgFotoCircular = viewInflater.findViewById(R.id.imgFotoCircular);
         imgFotoCircular.setImageResource(idFoto);
+
     }
+
 }

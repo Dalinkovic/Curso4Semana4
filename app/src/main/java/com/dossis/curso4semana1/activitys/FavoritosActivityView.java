@@ -15,10 +15,8 @@ import com.dossis.curso4semana1.presenter.FavoritosPresenter;
 
 public class FavoritosActivityView extends BaseActivity implements IFavoritosActivityView, IConfigRecyclerView {
 
-   /* public ArrayList mascotasOrdenadas;*/
-    private RecyclerView rvMascotas;
-
     FavoritosPresenter presenter;
+    private RecyclerView rvMascotas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,16 +27,14 @@ public class FavoritosActivityView extends BaseActivity implements IFavoritosAct
             setActionBar(this, true);
         }
 
-
-        presenter = new FavoritosPresenter( this);
+        presenter = new FavoritosPresenter(this);
 
         configurarRecyclerView(null);
 
-
-
     }
+
     @Override
-    public void configurarRecyclerView(View view ) {
+    public void configurarRecyclerView(View view) {
         rvMascotas = findViewById(R.id.rvMascotas);
         LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
@@ -46,24 +42,10 @@ public class FavoritosActivityView extends BaseActivity implements IFavoritosAct
 
         presenter.crearAdapter();
     }
+
     @Override
     public void resultAdapter(MascotaAdapter adapter) {
         rvMascotas.setAdapter(adapter);
     }
-/*
 
-
-
-    private void asociarRecyclerView() {
-        rvMascotas = findViewById(R.id.rvMascotas);
-        LinearLayoutManager llm = new LinearLayoutManager(this);
-        llm.setOrientation(LinearLayoutManager.VERTICAL);
-        rvMascotas.setLayoutManager(llm);
-    }
-
-    private void inicializarAdapter() {
-        MascotaAdapter adapter = new MascotaAdapter(mascotasOrdenadas, false, false);
-        rvMascotas.setAdapter(adapter);
-
-    }*/
 }

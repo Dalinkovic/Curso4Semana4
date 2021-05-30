@@ -25,7 +25,7 @@ public class VotacionesFragmentView extends Fragment implements IVotacionesFragm
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        //return super.onCreateView(inflater, container, savedInstanceState);
+
         View viewInflated = inflater.inflate(R.layout.fragment_recyclerview, container, false);
 
         presenter = new VotacionesFragmentPresenter(this);
@@ -34,7 +34,8 @@ public class VotacionesFragmentView extends Fragment implements IVotacionesFragm
 
         return viewInflated;
     }
-@Override
+
+    @Override
     public void configurarRecyclerView(View view) {
         rvMascotas = view.findViewById(R.id.rvMascotas);
         LinearLayoutManager llm = new LinearLayoutManager(view.getContext());

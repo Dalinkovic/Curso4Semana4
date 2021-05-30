@@ -30,7 +30,7 @@
                 android:src="@drawable/huesoblanco" />
 
             <TextView
-                android:id="@+id/tvNombre"
+                android:id="@+id/tvNombreMascota"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="12"
@@ -50,7 +50,7 @@
                 android:textStyle="bold" />
 
             <ImageView
-                android:id="@+id/imgHuestoAmarillo"
+                android:id="@+id/imgHuesoAmarillo"
                 android:layout_width="@dimen/hueso_ancho"
                 android:layout_height="@dimen/hueso_alto"
                 android:layout_weight="1"

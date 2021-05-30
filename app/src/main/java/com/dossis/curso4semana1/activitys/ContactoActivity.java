@@ -10,7 +10,7 @@ import com.dossis.curso4semana1.services.JavaMailAPI;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
-public class ContactoActivity extends BaseActivity implements JavaMailAPI.OnTaskCompleted , IContactoActivity {
+public class ContactoActivity extends BaseActivity implements JavaMailAPI.OnTaskCompleted, IContactoActivity {
 
     TextView tvNombre;
     TextView tvEmail;

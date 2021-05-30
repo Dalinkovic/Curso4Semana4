@@ -41,14 +41,11 @@ public class TablaMascotas {
 <img src="https://github.com/Dalinkovic/Curso4Semana1/blob/master/tab_votacion.jpg" width="480">
 <hr><br>
 
-<p>Tab del perfil de nuestra mascota Rufo.</p>
-<img src="https://github.com/Dalinkovic/Curso4Semana1/blob/master/perfil_mi_mascota.jpg" width="480">
-<hr><br>
 <p>La estrella del Toolbar te lleva a ver los 5 mejores. Función de ordenación en el POJO con compareTo.</p>
 <img src="https://github.com/Dalinkovic/Curso4Semana1/blob/master/top_5_favoritos.jpg" width="480">
 <hr><br>
-<p>Menú con las dos opciones Contacto y Acerca De</p>
-<img src="https://github.com/Dalinkovic/Curso4Semana1/blob/master/menu_opciones.jpg" width="480">
+<p>Menú con las tres opciones de Contacto, Cuenta Instagram y Acerca De</p>
+<img src="https://github.com/Dalinkovic/Curso4Semana1/blob/master/menucuenta.png" width="480">
 <hr><br>
 <p>Enviando con JavaMailAPI. Muestra mensaje enviando en tarea asincrónica.</p>
 <img src="https://github.com/Dalinkovic/Curso4Semana1/blob/master/javamail_sending.jpg" width="480">
@@ -60,3 +57,14 @@ public class TablaMascotas {
 <p>Acerca de</p>
 <img src="https://github.com/Dalinkovic/Curso4Semana1/blob/master/acerca_de.jpg" width="480">
 <br>
+
+<p>Conectando un user de instagram</p>
+<img src="https://github.com/Dalinkovic/Curso4Semana1/blob/master/menucuenta2.png" width="480">
+<hr><br>
+
+<p>Cargando desde la API de Facebook/Instagram, imagenes y likes.</p>
+<p>Si tarda en cargar muestra unas fotos de una huella de perro en los placeholder.</p>
+<img src="https://github.com/Dalinkovic/Curso4Semana1/blob/master/instagram.png" width="480">
+<hr><br>
+
+

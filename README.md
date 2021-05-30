@@ -61,6 +61,8 @@ public class TablaMascotas {
 <p>Conectando un user de instagram</p>
 <img src="https://github.com/Dalinkovic/Curso4Semana1/blob/master/menucuenta2.png" width="480">
 <hr><br>
+<p>Endpont: https://graph.facebook.com/v8.0/17841447374397234/media?fields=id,caption,media_type,media_url,owner,username,like_count</p>
+<p> Pon tu accesstoken y tu id Instagram business</b>
 
 <p>Cargando desde la API de Facebook/Instagram, imagenes y likes.</p>
 <p>Si tarda en cargar muestra unas fotos de una huella de perro en los placeholder.</p>

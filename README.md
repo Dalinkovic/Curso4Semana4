@@ -70,3 +70,7 @@ public class TablaMascotas {
 <hr><br>
 
 
+
+<p>Video demostrando el funcionamiento</p>
+https://user-images.githubusercontent.com/44303464/120105791-c74f1c00-c15a-11eb-9c0e-8cfd47d59468.mp4
+<hr><br>

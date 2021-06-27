@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "613105206110",
+    "project_id": "petagram-dcp",
+    "storage_bucket": "petagram-dcp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:613105206110:android:b91ee516ea513e63e705cf",
+        "android_client_info": {
+          "package_name": "com.dossis.curso4semana3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "613105206110-ql8aa7u8s24pdheisb2p8lbtp2ltb3mp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dossis.curso4semana3",
+            "certificate_hash": "823a6011be66e24a3e30e2938fbc09fe0447c015"
+          }
+        },
+        {
+          "client_id": "613105206110-4l2jvoqlgiugjrurh65tnomlr0i38b6i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEvOeXWdnrZJm_Gqqm691iCbJLwrVPjTM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "613105206110-4l2jvoqlgiugjrurh65tnomlr0i38b6i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

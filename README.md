@@ -69,7 +69,9 @@ public class TablaMascotas {
 <img src="https://github.com/Dalinkovic/Curso4Semana3/blob/master/instagram.png" width="480">
 <hr><br>
 
-
+<p>Enviando, guardando y recuperando el token de dispositivo y el idUsuario de instagram</p>
+<img src=https://github.com/Dalinkovic/Curso4Semana3/blob/master/FirebaseEndpoint.png" width="480">
+<hr><br>
 
 <p>Video demostrando el funcionamiento</p>
 https://user-images.githubusercontent.com/44303464/120105791-c74f1c00-c15a-11eb-9c0e-8cfd47d59468.mp4

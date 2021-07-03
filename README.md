@@ -86,8 +86,13 @@ https://github.com/Dalinkovic/Curso4semana4/blob/master/video%20notificacion%20l
 <hr><br>
 
 <p>Logs de nodejs con la entrada al endpoint send-likes.
-<img src="https://github.com/Dalinkovic/Curso4semana4/blob/master/captura-logs.JPG" width=2480">
+<img src="https://github.com/Dalinkovic/Curso4semana4/blob/master/captura-logs.JPG" width="480">
 <hr><br>
+
+<p>Pantallazo del emulador recibiendo notificación cada vez que se hace like
+<img src="https://github.com/Dalinkovic/Curso4semana4/blob/master/demowearable.JPG" width="480">
+<hr><br>
+
 
 <p>Video demostrando como envía los likes al emulador wearable e interactua navegando y mostrando distintas pantallas al tocar el smartwach.</p>
 https://github.com/Dalinkovic/Curso4semana4/blob/master/videoWearable.mp4

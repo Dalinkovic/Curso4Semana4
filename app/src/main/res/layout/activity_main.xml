@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.dossis.curso4semana3.activitys.MainActivity">
+    tools:context="com.dossis.curso4semana4.activitys.MainActivity">
 
     <include
         android:id="@+id/miActionBar"

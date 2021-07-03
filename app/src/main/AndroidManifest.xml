@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.dossis.curso4semana3">
+    package="com.dossis.curso4semana4">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -12,10 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Curso4Semana3">
-        <activity android:name=".activitys.RecibirNotificacionesActivity"></activity>
+        <activity android:name="com.dossis.curso4semana4.activitys.RecibirNotificacionesActivity"></activity>
 
         <service
-            android:name=".services.MyFirebaseMessagingService"
+            android:name="com.dossis.curso4semana4.services.MyFirebaseMessagingService"
             android:enabled="true"
             android:exported="false">
             <intent-filter>
@@ -23,7 +23,7 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".activitys.LoginActivity">
+        <activity android:name="com.dossis.curso4semana4.activitys.LoginActivity">
             <intent-filter android:scheme="http">
                 <action android:name="android.intent.action.VIEW" />
 
@@ -56,35 +56,35 @@
         <data android:host="curso4semana3" android:scheme="appSchema"/>
         -->
         <activity
-            android:name=".activitys.ContactoActivity"
+            android:name="com.dossis.curso4semana4.activitys.ContactoActivity"
             android:label="@string/title_activity_contacto"
-            android:parentActivityName=".activitys.MainActivity"
+            android:parentActivityName="com.dossis.curso4semana4.activitys.MainActivity"
             android:theme="@style/Theme.Curso4Semana3.NoActionBar">
 
             <!-- Soporte para versiones 4.0 o menores -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.dossis.curso4semana3.activitys.MainActivity" />
+                android:value="com.dossis.curso4semana4.activitys.MainActivity" />
         </activity>
         <activity
-            android:name=".activitys.AcercaDeActivity"
-            android:parentActivityName=".activitys.MainActivity">
+            android:name="com.dossis.curso4semana4.activitys.AcercaDeActivity"
+            android:parentActivityName="com.dossis.curso4semana4.activitys.MainActivity">
 
             <!-- Soporte para versiones 4.0 o menores -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.dossis.curso4semana3.activitys.MainActivity" />
+                android:value="com.dossis.curso4semana4.activitys.MainActivity" />
         </activity>
         <activity
-            android:name=".activitys.FavoritosActivityView"
-            android:parentActivityName=".activitys.MainActivity">
+            android:name="com.dossis.curso4semana4.activitys.FavoritosActivityView"
+            android:parentActivityName="com.dossis.curso4semana4.activitys.MainActivity">
 
             <!-- Soporte para versiones 4.0 o menores -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.dossis.curso4semana3.activitys.MainActivity" />
+                android:value="com.dossis.curso4semana4.activitys.MainActivity" />
         </activity>
-        <activity android:name=".activitys.MainActivity">
+        <activity android:name="com.dossis.curso4semana4.activitys.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

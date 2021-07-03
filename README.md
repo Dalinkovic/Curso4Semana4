@@ -69,10 +69,15 @@ public class TablaMascotas {
 <img src="https://github.com/Dalinkovic/Curso4Semana3/blob/master/instagram.png" width="480">
 <hr><br>
 
-<p>Enviando, guardando y recuperando el token de dispositivo y el idUsuario de instagram</p>
-<img src="https://github.com/Dalinkovic/Curso4Semana3/blob/master/FirebaseEndpoint.png" width="480">
-<hr><br>
+
+
 
 <p>Video demostrando el funcionamiento</p>
 https://user-images.githubusercontent.com/44303464/120105791-c74f1c00-c15a-11eb-9c0e-8cfd47d59468.mp4
 <hr><br>
+
+<p>Al dar like, se envía la mascota, junto al idInstagram y el token y el numero de likes actualizado en bd. 
+Como no hay mas usuario que el mío, me hago los likes a mi mismo. Todo el problema es porque el endpoint de Instagram que solicitan ya no está permitido.</p>
+<img src="https://github.com/Dalinkovic/Curso4Semana3/blob/master/Screenshot_2021-07-03-09-45-16-065_com.dossis.curso4semana3.jpg" width="480">
+<hr><br>
+

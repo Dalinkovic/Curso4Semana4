@@ -36,3 +36,6 @@ Segun documentacion: npm install firebase-admin --save
 
 URL para añadir firebase al servidor heroku
 https://firebase.google.com/docs/admin/setup
+
+Instlar Firebase CLoud Messenger fcm-push para enviar notificaciones desde nodejs
+npm install fcm-push

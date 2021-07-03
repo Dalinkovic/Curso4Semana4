@@ -35,6 +35,9 @@ public class TablaMascotas {
             " SET "+ TABLA_MASCOTAS_COLUMN_LIKES + " = "+ TABLA_MASCOTAS_COLUMN_LIKES + " + 1 " +
             " WHERE "+TABLA_MASCOTAS_COLUMN_ID+" = ";
 
+    public static final String SELECT_LIKES_BY_ID="SELECT "+ TABLA_MASCOTAS_COLUMN_LIKES+ " FROM "+ TABLA_MASCOTAS +
+            " WHERE "+TABLA_MASCOTAS_COLUMN_ID+" = ";
+
     public static final String SELECT_ORDER_ID ="SELECT * FROM " + TABLA_MASCOTAS +
                                                 " ORDER BY " + TABLA_MASCOTAS_COLUMN_ID;
     public static final String SELECT_5_FAVORITOS ="SELECT * FROM "+TABLA_MASCOTAS+
@@ -68,11 +71,21 @@ public class TablaMascotas {
             insertMascota(context, 8, "Carahuevo", R.drawable.perro8);
         }
     }
-    public void addLike(Context ctx, int id) {
+    public int addLike(Context ctx, int id) {
         DatabaseHelper dbHelper = new DatabaseHelper(ctx);
         SQLiteDatabase db= dbHelper.getWritableDatabase();
         db.execSQL(UPDATE_LIKES_BY_ID + id);
+
+
+        Cursor cursor= db.rawQuery(SELECT_LIKES_BY_ID + id,null);
+
+        cursor.moveToNext();
+        int likes=cursor.getInt(0);
+
+
         db.close();
+        return likes;
+
     }
 
     public ArrayList<Mascota> getMascotasOrderedId(Context context)

@@ -1,6 +1,8 @@
 package com.dossis.curso4semana3.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,10 +15,20 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder;
 
 import com.dossis.curso4semana3.R;
 import com.dossis.curso4semana3.database.TablaMascotas;
+import com.dossis.curso4semana3.interfaces.IFirebaseEndpoint;
 import com.dossis.curso4semana3.pojo.Mascota;
+import com.dossis.curso4semana3.pojo.UsuarioResponse;
+import com.dossis.curso4semana3.restApi.Keys;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MascotaAdapter extends RecyclerView.Adapter<MascotaAdapter.MascotaViewHolder> {
 
@@ -24,7 +36,7 @@ public class MascotaAdapter extends RecyclerView.Adapter<MascotaAdapter.MascotaV
     ArrayList<Mascota> mascotas;
     boolean permitirLike;
     boolean versionReducida;
-
+    final String TAG = "MascotaAdapter";
 
     public MascotaAdapter(ArrayList<Mascota> mascotas, boolean permitirLike, boolean versionReducida, Context context) {
 
@@ -69,9 +81,11 @@ public class MascotaAdapter extends RecyclerView.Adapter<MascotaAdapter.MascotaV
             mascotaViewHolder.imgHuesoBlanco.setOnClickListener(v -> {
 
                 TablaMascotas tablaMascotas = new TablaMascotas(v.getContext());
-                tablaMascotas.addLike(v.getContext(), mascota.getId());
+                int likes = tablaMascotas.addLike(v.getContext(), mascota.getId());
                 mascotas = tablaMascotas.getMascotasOrderedId(v.getContext());
                 notifyDataSetChanged();
+                registerAndSendLike(mascota.getNombre(), likes);
+
 
             });
         } else {
@@ -80,6 +94,53 @@ public class MascotaAdapter extends RecyclerView.Adapter<MascotaAdapter.MascotaV
         if (versionReducida) {
             mascotaViewHolder.tvNombreMascota.setVisibility(View.GONE);
         }
+    }
+
+    public void registerAndSendLike(String nombreMascota, int likes) {
+
+        FirebaseMessaging.getInstance().getToken()
+                .addOnCompleteListener(new OnCompleteListener<String>() {
+                    @SuppressLint("LongLogTag")
+                    @Override
+                    public void onComplete(@NonNull Task<String> task) {
+                        if (!task.isSuccessful()) {
+                            Log.w(TAG, "Fetching FCM registration token failed", task.getException());
+                            return;
+                        }
+
+                        // Get new FCM registration token
+                        String token = task.getResult();
+                        sendLike(token, nombreMascota, likes);
+
+                    }
+                });
+    }
+
+    @SuppressLint("LongLogTag")
+    private void sendLike(String token, String nombreMascota, int likes) {
+        Log.d(TAG, "enviarTokenRegistro token:" + token);
+        FirebaseAdapter firebaseAdapter = new FirebaseAdapter();
+        IFirebaseEndpoint firebaseDB = firebaseAdapter.establecerConexionRestAPI();
+        String idIG = Keys.USER_ID;
+
+        Call<Void> usuarioResponseCall = firebaseDB.sendLike(token, idIG, nombreMascota, likes);
+        usuarioResponseCall.enqueue(new Callback<Void>() {
+            @Override
+            public void onResponse(Call<Void> call, Response<Void> response) {
+                if (response.isSuccessful()) {
+                    Log.d(TAG, "OK");
+                } else {
+                    Log.d(TAG, "Error ");
+                }
+            }
+
+
+            @Override
+            public void onFailure(Call<Void> call, Throwable t) {
+                Log.e(TAG, "Error usuarioResponse", t);
+            }
+        });
+
     }
 
     @Override

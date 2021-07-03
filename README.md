@@ -81,3 +81,6 @@ Como no hay mas usuario que el mío, me hago los likes a mi mismo. Todo el probl
 <img src="https://github.com/Dalinkovic/Curso4Semana3/blob/master/Screenshot_2021-07-03-09-45-16-065_com.dossis.curso4semana3.jpg" width="480">
 <hr><br>
 
+<p>Video demostrando que suma el like y envía la notificación</p>
+https://github.com/Dalinkovic/Curso4Semana3/blob/master/video%20notificacion%20likes.mp4
+<hr><br>

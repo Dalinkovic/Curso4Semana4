@@ -90,7 +90,7 @@ https://github.com/Dalinkovic/Curso4semana4/blob/master/video%20notificacion%20l
 <hr><br>
 
 <p>Pantallazo del emulador recibiendo notificación cada vez que se hace like
-<img src="https://github.com/Dalinkovic/Curso4semana4/blob/master/demowearable.JPG" width="480">
+<img src="https://github.com/Dalinkovic/Curso4Semana4/blob/master/demowearable.png" width="480">
 <hr><br>
 
 

@@ -85,11 +85,11 @@ Como no hay mas usuario que el mío, me hago los likes a mi mismo. Todo el probl
 https://github.com/Dalinkovic/Curso4semana4/blob/master/video%20notificacion%20likes.mp4
 <hr><br>
 
-<p>Logs de nodejs con la entrada al endpoint send-likes.
+<p>Logs de nodejs con la entrada al endpoint send-likes.</p>
 <img src="https://github.com/Dalinkovic/Curso4semana4/blob/master/captura-logs.JPG" width="480">
 <hr><br>
 
-<p>Pantallazo del emulador recibiendo notificación cada vez que se hace like
+<p>Pantallazo del emulador recibiendo notificación cada vez que se hace like</p>
 <img src="https://github.com/Dalinkovic/Curso4Semana4/blob/master/demowearable.png" width="480">
 <hr><br>
 

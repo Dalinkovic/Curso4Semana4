@@ -11,7 +11,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Curso4Semana3">
+        android:theme="@style/Theme.Curso4Semana4">
         <activity android:name="com.dossis.curso4semana4.activitys.RecibirNotificacionesActivity"></activity>
 
         <service
@@ -32,7 +32,7 @@
 
                 <data
                     android:host="/oauth2redirect"
-                    android:scheme="com.dossis.curso4semana3" />
+                    android:scheme="com.dossis.curso4semana4" />
             </intent-filter>
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
@@ -41,7 +41,7 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:host="com.dossis.curso4semana3"
+                    android:host="com.dossis.curso4semana4"
                     android:pathPrefix="/oauth2redirect"
                     android:scheme="https" />
             </intent-filter>
@@ -53,13 +53,13 @@
         <!--
 <action android:name="android.intent.action.VIEW" />
         <category android:name="android.intent.category.BROWSABLE"/>
-        <data android:host="curso4semana3" android:scheme="appSchema"/>
+        <data android:host="curso4semana4" android:scheme="appSchema"/>
         -->
         <activity
             android:name="com.dossis.curso4semana4.activitys.ContactoActivity"
             android:label="@string/title_activity_contacto"
             android:parentActivityName="com.dossis.curso4semana4.activitys.MainActivity"
-            android:theme="@style/Theme.Curso4Semana3.NoActionBar">
+            android:theme="@style/Theme.Curso4Semana4.NoActionBar">
 
             <!-- Soporte para versiones 4.0 o menores -->
             <meta-data

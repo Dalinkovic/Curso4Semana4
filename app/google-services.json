@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:613105206110:android:b91ee516ea513e63e705cf",
         "android_client_info": {
-          "package_name": "com.dossis.curso4semana3"
+          "package_name": "com.dossis.curso4semana4"
         }
       },
       "oauth_client": [
@@ -17,7 +17,7 @@
           "client_id": "613105206110-ql8aa7u8s24pdheisb2p8lbtp2ltb3mp.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.dossis.curso4semana3",
+            "package_name": "com.dossis.curso4semana4",
             "certificate_hash": "823a6011be66e24a3e30e2938fbc09fe0447c015"
           }
         },
